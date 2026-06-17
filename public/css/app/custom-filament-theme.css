@@ -1,0 +1,108 @@
+/* Custom Tech CSS for CSIRT RSUI Filament CMS Admin */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Apply general fonts */
+:root {
+    --font-sans: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+    font-family: var(--font-sans) !important;
+}
+
+.fi-sidebar-item-button-active {
+    border-left: 3px solid rgb(20, 184, 166) !important; /* Teal accent active border */
+    background-color: rgba(20, 184, 166, 0.1) !important;
+    box-shadow: inset 0 0 10px rgba(20, 184, 166, 0.15) !important;
+}
+
+.fi-sidebar-item-button-active svg {
+    color: rgb(20, 184, 166) !important;
+    filter: drop-shadow(0 0 4px rgba(20, 184, 166, 0.6)) !important;
+}
+
+.fi-brand {
+    font-family: var(--font-sans) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    background: linear-gradient(to right, rgb(59, 130, 246), rgb(20, 184, 166)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 8px rgba(20, 184, 166, 0.25)) !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(20, 184, 166, 0.3);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 184, 166, 0.6);
+}
+
+/* Cyber styled tables */
+.fi-ta-table {
+    border-collapse: separate !important;
+    border-spacing: 0 4px !important;
+}
+
+.fi-ta-row {
+    background-color: rgba(15, 23, 42, 0.4) !important;
+    border: 1px solid rgba(51, 65, 85, 0.5) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.fi-ta-row:hover {
+    background-color: rgba(20, 184, 166, 0.05) !important;
+    border-color: rgba(20, 184, 166, 0.3) !important;
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.08) !important;
+}
+
+/* Monospace font for technical tables/badges/inputs */
+.fi-ta-cell, .fi-fo-component, .font-mono, td, code, input, select, textarea {
+    font-family: var(--font-mono) !important;
+}
+
+/* Stats Overview card styling */
+.fi-wi-stats-overview-stat-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.5)) !important;
+    border: 1px solid rgba(51, 65, 85, 0.5) !important;
+    border-top: 3px solid rgb(20, 184, 166) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-wi-stats-overview-stat-card:hover {
+    border-color: rgb(20, 184, 166) !important;
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+/* Glow inputs */
+input:focus, select:focus, textarea:focus {
+    border-color: rgb(20, 184, 166) !important;
+    box-shadow: 0 0 8px rgba(20, 184, 166, 0.4) !important;
+}
+
+/* Filament Buttons */
+.fi-btn {
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+.fi-btn-color-primary {
+    background: linear-gradient(135deg, rgb(13, 148, 136), rgb(20, 184, 166)) !important;
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.25) !important;
+}
+.fi-btn-color-primary:hover {
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.5) !important;
+    filter: brightness(1.1);
+}
