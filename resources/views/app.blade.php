@@ -82,7 +82,7 @@
                 right: 0;
                 z-index: 9999;
                 width: 100%;
-                padding: 20px 32px;
+                padding: 18px 24px;
                 border-top: 1px solid rgba(255, 255, 255, 0.08);
                 background-color: rgba(10, 15, 30, 0.85);
                 backdrop-filter: blur(16px);
@@ -90,6 +90,12 @@
                 transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
                 opacity: 0;
                 transform: translateY(100%);
+                box-sizing: border-box;
+            }
+            @media (min-width: 768px) {
+                #cookie-consent-banner {
+                    padding: 20px 48px;
+                }
             }
             
             /* Light mode styling */
@@ -103,8 +109,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                max-width: 1200px;
-                margin: 0 auto;
                 width: 100%;
             }
 
