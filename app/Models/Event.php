@@ -24,17 +24,12 @@ class Event extends Model
         'event_date' => 'datetime',
     ];
 
-    /**
-     * Get the thumbnail URL.
-     *
-     * @return string|null
-     */
     public function getThumbnailUrlAttribute(): ?string
     {
         if (!$this->thumbnail) {
             return null;
         }
 
-        return '/storage/' . ltrim($this->thumbnail, '/');
+        return asset('storage/' . ltrim($this->thumbnail, '/'));
     }
 }

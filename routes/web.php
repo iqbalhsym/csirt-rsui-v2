@@ -16,7 +16,7 @@ Route::get('/', function () {
     $latestPosts = Post::query()
         ->published()
         ->latest('published_at')
-        ->take(3)
+        ->take(4)
         ->get()
         ->map(fn ($post) => [
             'id' => $post->id,
